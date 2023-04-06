@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ISRO-API</title>
+        <link href="style.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <script>
+            fetch("data/spacecrafts.json")
+            .then((res)=>res.json())
+            .then((result)=>  {
+                console.log(result);
+                for(var X in result){
+                var a=`${result[X].id} - ${result[X].name} <br>`;
+                document.write(a);
+                }
+                
+            })
+            .catch((error) => console.log("can't fatch data"));
+
+// -----------------------------------------------------------------
+         
+            fetch("data/launchers.json")
+            .then((res)=>res.json())
+            .then((result)=>  {
+                console.log(result);
+                for(var X in result){
+                var a=`${result[X].id} <br>`;
+                document.write(a);
+                }
+                
+            })
+            .catch((error) => console.log("can't fatch data"));
+
+// ---------------------------------------------------------------------
+
+fetch("data/customer_satellites.json")
+            .then((res)=>res.json())
+            .then((result)=>  {
+                console.log(result);
+                for(var X in result){
+                var a=`${result[X].id}- &nbsp;&nbsp; ${result[X].country}- &nbsp;&nbsp; ${result[X].launch_date}- &nbsp;&nbsp; ${result[X].mass}- &nbsp;&nbsp; ${result[X].launcher} <br>`;
+                document.write(a);
+                }
+                
+            })
+            .catch((error) => console.log("can't fatch data"));
+// -------------------------------------------------------------------------
+fetch("data/centres.json")
+            .then((res)=>res.json())
+            .then((result)=>  {
+                console.log(result);
+                for(var X in result){
+                var a=`${result[X].id}- &nbsp;&nbsp; ${result[X].name}- &nbsp;&nbsp; ${result[X].Place}- &nbsp;&nbsp; ${result[X].State}  <br>`;
+                document.write(a);
+                }
+                
+            })
+            .catch((error) => console.log("can't fatch data"));
+
+                    </script>
+    </body>
+</html>
+
