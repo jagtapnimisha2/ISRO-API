@@ -2,7 +2,7 @@
 
 Open Source API for Launched Spacecrafts & Rockets data of ISRO
 
-[live link]
+[live link](https://jagtapnimisha2.github.io/ISRO-API/)
 
 ## API End-Points
 
